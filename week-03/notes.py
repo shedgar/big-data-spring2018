@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
-import matplotlib
+import matplotlib.pylab as plt
 %matplotlib inline
-# ^^^ last two lines are wrong???
 
 new_list = []
 df = pd.DataFrame()
