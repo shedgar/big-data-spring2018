@@ -2,7 +2,11 @@
 
 ## Deadlines
 
+<<<<<<< HEAD
 + Pin-Up materials should be submitted to Stellar by *Monday March 14th by 9AM*.
+=======
++ Pin-Up materials should be submitted to Stellar by *Monday May 14th by 9AM*.
+>>>>>>> class/master
 
 ## Description
 
