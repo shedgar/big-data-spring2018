@@ -85,7 +85,7 @@ import numpy as np
 import os
 %matplotlib inline
 ## make sure you set the DATA path to be to the folder where you downloaded the data at the beginning of class
-DATA = "/Users/ehuntley/Desktop/week-05/landsat"
+DATA = "/Users/sarahedgar/Desktop/11.S941/week-05-data"
 ```
 
 ## Calculating a Normalized Difference Vegetation Index
@@ -103,12 +103,12 @@ red_path = os.path.join(DATA, 'b4.tif')
 nir_path = os.path.join(DATA, 'b5.tif')
 
 # Load in Red band
-red_data = gdal.Open(b4_raster)
+red_data = gdal.Open(red_path)
 red_band = red_data.GetRasterBand(1)
 red = red_band.ReadAsArray()
 
 # Load in Near-infrasred band
-nir_data = gdal.Open(b5_raster)
+nir_data = gdal.Open(nir_path)
 nir_band = nir_data.GetRasterBand(1)
 nir = nir_band.ReadAsArray()
 ```
@@ -199,7 +199,7 @@ We now need to read in some correction values stored in the Landsat metadata in 
 
 ```python
 # make this path the local path to your MTL.txt file that you downloaded at the start of the workshop
-meta_file = '/Users/ehuntley/Desktop/week-05/landsat/MTL.txt'
+meta_file = '/Users/sarahedgar/Desktop/11.S941/week-05-data/MTL.txt'
 
 with open(meta_file) as f:
     meta = f.readlines()
