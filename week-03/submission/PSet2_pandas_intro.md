@@ -29,7 +29,7 @@ import matplotlib.pylab as plt
 %matplotlib inline
 
 # Read in the data
-
+# df = pd.read_csv('/Users/ehuntley/Dropbox/teaching/big-data/data/skyhook_2017-07.csv', sep=',')
 df = pd.read_csv('week-03/data/skyhook_2017-07.csv', sep=',')
 
 # Create a new date column formatted as datetimes.
@@ -70,7 +70,15 @@ Your first task is to create a bar chart (not a line chart!) of the total count 
 
 ```python
 
-plt.figure(); df.plot(kind = 'bar');
+plt.figure()
+df.plot(kind = 'bar')
+
+
+# Try something like...
+date_group = df['count'].groupby(df['date_new']).sum()
+test = date_group.plot(kind='bar', title ="Total count of GPS pings by date", fontsize=12, color=(1,0,0.8))
+y.set_ylabel("Total pings", fontsize=12)
+plt.show()
 
 ```
 
